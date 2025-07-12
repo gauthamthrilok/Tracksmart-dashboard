@@ -2,7 +2,9 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const { Strategy: GoogleStrategy } = require('passport-google-oauth20');
-const User = require('../models/User'); // Adjust path
+const User = require('../models/users'); // Adjust path
+
+require('dotenv').config();
 
 // Setup Google Strategy
 passport.use(new GoogleStrategy({
